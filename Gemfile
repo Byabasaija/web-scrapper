@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
+gem 'cli-colorize'
 gem 'httparty'
 gem 'nokogiri'
 gem 'open-uri'
-gem 'cli-colorize'

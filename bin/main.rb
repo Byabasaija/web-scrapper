@@ -4,7 +4,6 @@ require_relative '../lib/scraper.rb'
 
 require 'httparty'
 require 'nokogiri'
-require 'open-uri'
 require 'cli-colorize'
 
 def start

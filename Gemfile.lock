@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     cli-colorize (2.0.0)
+    diff-lcs (1.4.4)
     httparty (0.18.1)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -12,7 +13,19 @@ GEM
     multi_xml (0.6.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    open-uri (0.1.0)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.0)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.0)
 
 PLATFORMS
   ruby
@@ -22,7 +35,7 @@ DEPENDENCIES
   cli-colorize
   httparty
   nokogiri
-  open-uri
+  rspec
 
 BUNDLED WITH
    2.2.0

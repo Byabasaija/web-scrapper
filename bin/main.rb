@@ -1,55 +1,46 @@
 
-
-require_relative '../lib/products.rb'
 require_relative '../lib/scraper.rb'
 
 require 'httparty'
+require 'pry'
 require 'nokogiri'
 require 'open-uri'
 require 'cli-colorize'
 
-class Interface
-  def start
-    puts '************************************'
-    puts ''
-    puts ' Hey there, Welcome once again!'
-    puts ''
-    puts 'Ready to serve you with products and their corresponding prices at Jumia Uganda'
-    puts '************************************'
-
-    retrieve_products
-    continue
-    display_products
-    user_exit_message
-  end
-
-  def retrieve_products
-    @products = Products.all
-  end
-
-  def continue
-    puts 'Please type "continue" to continue'
-    @input1 = gets.strip
-    until @input1 == 'continue'
-      puts 'Please type "continue" to continue'
-      @input1 = gets.strip
-    end
-    puts ''
-  end
-
-  def display_products
-    puts 'You made it!'
-    puts 'Here is your list of products and their prices on jumia uganda'
-    puts ''
-    @products.each.with_index(1) do |product, index|
-      puts "#{index}. #{product.name.yellow} : #{product.prices.blue}"
-    end
-    puts ''
-  end
-
-  def user_exit_message
-    puts 'Thank you for visiting choosing us, come back anytime'
-  end
+def start
+  puts '************************************'
+  puts ''
+  puts ' Here there, Welcome once again!'
+  puts ''
+  puts 'Ready to serve you with products and there corresponding prices at Jumia Uganda'
+  puts '************************************'
 end
 
-Interface.new.start
+def continue
+  puts 'Please type "continue" to continue'
+  input1 = gets.strip
+  until input1 == 'continue'
+    puts 'Please type "continue" to continue'
+    input1 = gets.strip
+  end
+  puts ''
+end
+
+def display_products
+  puts 'You made it!'
+  puts 'Here is your list of products and their prices on jumia uganda'
+  puts ''
+  scraper = Scraper.new
+  name = scraper.access_product_name
+  price = scraper.access_product_price
+  (0...price.size).each do |index|
+    puts "Product #{index + 1} "
+    puts "Name: #{name[index].yellow} : Price #{price[index].blue}"
+  end
+
+  puts ''
+end
+
+puts start
+puts continue
+puts display_products

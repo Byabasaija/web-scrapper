@@ -1,4 +1,3 @@
-
 require_relative '../lib/scraper.rb'
 
 require 'httparty'

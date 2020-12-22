@@ -75,7 +75,7 @@ rspec
 - Twitter: [@byabashaijapoet](https://twitter.com/byabashaijapoet)
 
 
-## Acknowledgements
+## Acknowledgement
 * [JUMIA Uganda](https://www.jumia.ug/mlp-everything-for-him/men-clothing/)
   - This is the website i used to build the program as the scraping source
 ## Contributing

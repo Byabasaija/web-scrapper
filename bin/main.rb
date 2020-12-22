@@ -2,18 +2,17 @@
 require_relative '../lib/scraper.rb'
 
 require 'httparty'
-require 'pry'
 require 'nokogiri'
 require 'open-uri'
 require 'cli-colorize'
 
 def start
-  puts '************************************'
+  puts '************************************'.yellow
   puts ''
   puts ' Here there, Welcome once again!'
   puts ''
   puts 'Ready to serve you with products and there corresponding prices at Jumia Uganda'
-  puts '************************************'
+  puts '************************************'.yellow
 end
 
 def continue
@@ -27,7 +26,7 @@ def continue
 end
 
 def display_products
-  puts 'You made it!'
+  puts 'You made it!'.yellow
   puts 'Here is your list of products and their prices on jumia uganda'
   puts ''
   scraper = Scraper.new
@@ -41,6 +40,11 @@ def display_products
   puts ''
 end
 
+def user_exit_message
+  puts 'Thank you for using our program. Return anytime'.blue
+end
+
 puts start
 puts continue
 puts display_products
+puts user_exit_message

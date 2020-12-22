@@ -3,7 +3,7 @@ In this project, i created a web scraper that allows a user to access products a
  
 I built this scraper with the aim of helping individuals  who spend a lot of time browsing products to know there prices.
 
-![screenshoot](scraper1.png)
+![screenshoot](scraperr.png)
 
 ## Getting Started
 
